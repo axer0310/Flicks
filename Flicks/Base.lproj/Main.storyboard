@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PQ5-lJ-u0r">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="PQ5-lJ-u0r">
                                                     <rect key="frame" x="135" y="4" width="232" height="71"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -52,6 +52,7 @@
                                             <outlet property="overviewLabel" destination="tkk-Dz-efS" id="L2Q-OW-QMh"/>
                                             <outlet property="posterView" destination="Hdg-Pb-fYH" id="VQH-cD-V2P"/>
                                             <outlet property="titleLabel" destination="PQ5-lJ-u0r" id="MIH-c8-pQU"/>
+                                            <segue destination="dNW-OS-kmA" kind="push" id="ZfY-bX-FGP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -66,7 +67,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.5" y="137.5"/>
+            <point key="canvasLocation" x="1763" y="794"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="7lh-oz-EVc">
+            <objects>
+                <viewController id="dNW-OS-kmA" customClass="DescriptionViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NLc-GP-srP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="jD0-aA-N2l">
+                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" id="SvO-8q-oTP">
+                                <rect key="frame" x="0.0" y="385" width="375" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" id="mal-f9-QMY">
+                                        <rect key="frame" x="8" y="15" width="349" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" id="HU1-ed-IUJ">
+                                        <rect key="frame" x="8" y="77" width="349" height="197"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k0k-U5-gqx"/>
+                    <connections>
+                        <outlet property="overviewLabel" destination="HU1-ed-IUJ" id="TQN-Go-wdq"/>
+                        <outlet property="posterImageView" destination="jD0-aA-N2l" id="JOh-Ru-QKW"/>
+                        <outlet property="titleLabel" destination="mal-f9-QMY" id="Jnt-91-WDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jwd-cK-VU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322.5" y="137.5"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="kl6-PV-Bqx">
@@ -102,7 +150,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterView" destination="Kh4-0c-IWW" id="Ea7-qp-CfT"/>
-                                            <segue destination="BYZ-38-t0r" kind="push" id="ewY-Xt-tYh"/>
+                                            <segue destination="dNW-OS-kmA" kind="push" id="8bB-Dl-L1o"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -110,7 +158,13 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3NA-Ct-GyT"/>
+                    <navigationItem key="navigationItem" id="3NA-Ct-GyT">
+                        <barButtonItem key="rightBarButtonItem" title="List View" id="t3p-PD-cVC">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="push" id="NT2-qt-eF3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="colection" destination="tzc-sY-rlB" id="qhN-gj-ubz"/>
                     </connections>
@@ -143,4 +197,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="8bB-Dl-L1o"/>
+    </inferredMetricsTieBreakers>
 </document>
