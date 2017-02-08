@@ -13,12 +13,20 @@ class DescriptionViewController: UIViewController {
 
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
+    
     @IBOutlet var overviewLabel: UILabel!
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var infoView: UIView!
+    
     
     var movie: NSDictionary!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width,height: infoView.frame.origin.y + infoView.frame.size.height )
+        
+        
         titleLabel.text = movie["title"] as! String
         
         let baseURL = "https://image.tmdb.org/t/p/w500";
@@ -28,6 +36,7 @@ class DescriptionViewController: UIViewController {
             posterImageView.setImageWith(image as! URL);
         }
         overviewLabel.text = movie["overview"] as! String
+        overviewLabel.sizeToFit();
        
         // Do any additional setup after loading the view.
     }
