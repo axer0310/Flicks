@@ -12,7 +12,7 @@
         <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController restorationIdentifier="NowPlaying1" id="BYZ-38-t0r" customClass="MovieViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GKA-V0-EF8" id="1ob-Wp-URe">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="174"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="PQ5-lJ-u0r">
@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="3950" y="678"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Now Playing-->
         <scene sceneID="kl6-PV-Bqx">
             <objects>
                 <viewController restorationIdentifier="NowPlaying" id="Gku-j4-OCK" customClass="CollectionViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +170,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3NA-Ct-GyT">
+                    <navigationItem key="navigationItem" title="Now Playing" id="3NA-Ct-GyT">
                         <barButtonItem key="rightBarButtonItem" title="List View" id="t3p-PD-cVC">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="push" id="NT2-qt-eF3"/>
@@ -189,7 +189,7 @@
         <scene sceneID="gOL-As-oan">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KDQ-Oh-8F8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="IiB-cO-vi5"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="Circled Play-25.png" id="IiB-cO-vi5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uqw-Fa-o35">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -223,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="1819.5" y="137.5"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Top Rated-->
         <scene sceneID="yhH-71-nam">
             <objects>
                 <viewController restorationIdentifier="TopRated" id="hRd-G0-xEk" customClass="CollectionViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
@@ -265,7 +265,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RfD-vg-umw">
+                    <navigationItem key="navigationItem" title="Top Rated" id="RfD-vg-umw">
                         <barButtonItem key="rightBarButtonItem" title="List View" id="2nZ-T4-l6d">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="push" id="9KP-XX-3cU"/>
@@ -280,11 +280,11 @@
             </objects>
             <point key="canvasLocation" x="2994" y="1002"/>
         </scene>
-        <!--Item-->
+        <!--Top Rated-->
         <scene sceneID="eE1-KI-lxE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n6t-1O-e6g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QzG-vh-n9k"/>
+                    <tabBarItem key="tabBarItem" title="Top Rated" image="Rating-25.png" id="QzG-vh-n9k"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zQ5-xP-bZk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -300,13 +300,17 @@
             <point key="canvasLocation" x="2407" y="1002"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Circled Play-25.png" width="25" height="25"/>
+        <image name="Rating-25.png" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qRY-Re-oXQ"/>
         <segue reference="9KP-XX-3cU"/>
+        <segue reference="ZfY-bX-FGP"/>
     </inferredMetricsTieBreakers>
 </document>

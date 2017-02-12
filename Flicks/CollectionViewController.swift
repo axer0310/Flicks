@@ -76,6 +76,19 @@ class CollectionViewController: UIViewController,UICollectionViewDataSource,UICo
         descriptionView.movie = movie;
         
         }
+        else if let cell = sender as? UIBarButtonItem
+        {
+            let listView = segue.destination as! MovieViewController;
+            if(self.restorationIdentifier == "NowPlaying")
+            {
+                listView.endPoint = "now_playing";
+            }
+            else
+            {
+                listView.endPoint = "top_rated";
+
+            }
+        }
         
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.

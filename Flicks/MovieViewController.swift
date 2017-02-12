@@ -28,13 +28,7 @@ class MovieViewController: UIViewController,UITableViewDataSource,UITableViewDel
         tableView.delegate = self;
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        if self.restorationIdentifier == "NowPlaying" ||
-            self.restorationIdentifier == "NowPlaying1"{
-            endPoint = "now_playing"
-        } else {
-            endPoint = "top_rated"
-        }
-
+        
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let url = URL(string: "https://api.themoviedb.org/3/movie/\(endPoint!)?api_key=\(apiKey)")!
