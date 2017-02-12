@@ -22,10 +22,12 @@ class MovieViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     override func viewDidLoad()
     {
+        
         super.viewDidLoad()
         tableView.dataSource = self;
         tableView.delegate = self;
         MBProgressHUD.showAdded(to: self.view, animated: true)
+        
         if self.restorationIdentifier == "NowPlaying" ||
             self.restorationIdentifier == "NowPlaying1"{
             endPoint = "now_playing"
@@ -83,6 +85,7 @@ class MovieViewController: UIViewController,UITableViewDataSource,UITableViewDel
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell;
         
+        
         let movie = movies![indexPath.row];
         let title = movie["title"] as! String;
         let overview = movie["overview"] as! String;
@@ -93,7 +96,9 @@ class MovieViewController: UIViewController,UITableViewDataSource,UITableViewDel
             var image = NSURL(string: baseURL+posterPath);
             cell.posterView.setImageWith(image as! URL);
         }
-        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(red:0.39, green:0.73, blue:0.71, alpha:0.7);
+        cell.selectedBackgroundView = backgroundView
         
         
         cell.titleLabel.text = title;
