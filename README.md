@@ -1,6 +1,6 @@
-# Project 1 - *Flicks*
+# Project 1 - *What's In*
 
-**Flicks** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**What's In** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 Time spent: **6** hours spent in total
 
@@ -58,9 +58,9 @@ Describe any challenges encountered while building the app.
     See the License for the specific language governing permissions and
     limitations under the License.
     
-# Project 2 - *Flicks*
+# Project 2 - *What's In*
 
-**Flicks** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**What's In** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 Time spent: **3** hours spent in total
 
