@@ -44,7 +44,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2017] [Kuan-Ting Wu]
+    Copyright [2017] [Kuan-Ting Wu (Arthur Wu)]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -100,7 +100,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2017] [What's In]
+    Copyright [2017] [Kuan-Ting Wu (Arthur Wu)]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
